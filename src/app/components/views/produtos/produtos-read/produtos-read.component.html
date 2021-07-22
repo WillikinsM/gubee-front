@@ -1,0 +1,32 @@
+<div class="content">
+  <div class="title">
+    <h1>Produtos</h1>
+  </div>
+
+  <div class="mat-elevation-z8 content-table">
+    <table class="table" mat-table [dataSource]="produtos">
+      <ng-container matColumnDef="productName">
+        <th mat-header-cell *matHeaderCellDef>NOME DO PRODUTO</th>
+        <td mat-cell *matCellDef="let row">{{row.productName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>DESCRICAO</th>
+        <td mat-cell *matCellDef="let row">{{row.description}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="targetMarket">
+        <th mat-header-cell *matHeaderCellDef>MERCADO ALVO</th>
+        <td mat-cell *matCellDef="let row">{{row.targetMarket}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="stacks">
+        <th mat-header-cell *matHeaderCellDef>Tecnologias</th>
+        <td mat-cell *matCellDef="let row">{{row.stack}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

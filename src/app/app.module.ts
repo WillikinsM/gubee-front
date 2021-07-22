@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { MatTableModule } from "@angular/material/table";
 import { MatButtonModule } from "@angular/material/button";
 import { NavComponent } from './components/template/nav/nav.component';
 import { FooterComponent } from './components/template/footer/footer.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { ProdutosReadComponent } from './components/views/produtos/produtos-read/produtos-read.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { FooterComponent } from './components/template/footer/footer.component';
     HeaderComponent,
     NavComponent,
     FooterComponent,
+    HomeComponent,
+    ProdutosReadComponent,
     
   ],
   imports: [
@@ -34,7 +39,8 @@ import { FooterComponent } from './components/template/footer/footer.component';
     MatIconModule,
     MatCardModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
 
   ],
   providers: [],
